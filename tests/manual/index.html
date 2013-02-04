@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>YUI CSS Extras</title>
+<link rel="stylesheet" type="text/css" href="http://necolas.github.com/normalize.css/1.0.2/normalize.css">
+<link rel="stylesheet" type="text/css" href="../../css/cssextras.css">
+<link rel="stylesheet" type="text/css" href="assets/layout.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.1/build/cssgrids/grids-min.css">
+<style>
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+.header {
+     background: black;
+     min-height: 80px;
+     margin: 0;
+     color:white;
+     padding: 30px 20px;
+ }
+     .header h2 {
+         font-weight:300;
+         color: #666;
+         margin:0;
+     }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                 "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    margin:0;
+    padding:0;
+}
+.content {
+    padding: 0 30px 2em;
+}
+
+.content h2 {
+    color:#2B474F;
+    margin:50px 0 20px 0;
+    font-weight:bold;
+}
+
+
+.yui3-img-eliptical,
+.yui3-img-shadow,
+.yui3-img-rounded,
+.yui3-img-bordered {
+	margin: 1em; /* remove this. it's only for viewing during dev */
+}
+</style>
+</head>
+
+<body>
+
+	<div class="header y-u-1">
+
+        <h1 class="yui3-u-1">YUI3 CSS Extras</h1>
+        <h2 class="yui3-u">Simple styling for images, thumbnails, code, badges/pills/ alerts</h2>
+
+    </div>
+	<div class="content">
+		<h2>Images</h2>
+		<img class="yui3-img-eliptical" src="assets/images/space_guy.jpg"/>
+		<img class="yui3-img-rounded" src="assets/images/space_guy.jpg"/>
+		<img class="yui3-img-bordered" src="assets/images/space_guy.jpg"/>
+		<br>
+		<img class="yui3-img-eliptical" src="assets/images/pic_dark.jpg"/>
+		<img class="yui3-img-rounded" src="assets/images/pic_dark.jpg"/>
+		<img class="yui3-img-bordered" src="assets/images/pic_dark.jpg"/>
+		<br>
+		<img class="yui3-img-eliptical" src="assets/images/pic_medium.jpg"/>
+		<img class="yui3-img-rounded" src="assets/images/pic_medium.jpg"/>
+		<img class="yui3-img-bordered" src="assets/images/pic_medium.jpg"/>
+		<br>
+		<img class="yui3-img-eliptical" src="assets/images/pic_light.jpg"/>
+		<img class="yui3-img-rounded" src="assets/images/pic_light.jpg"/>
+		<img class="yui3-img-bordered" src="assets/images/pic_light.jpg"/>
+		
+		<h2>Thumbnails</h2>
+		<p>
+			if you have yui grids on the page, add yui3-u-* for multi-column thumbnails that scale to fit the columns.
+		</p>
+		<ul class="yui3-thumbnails yui3-g">
+			<li class="yui3-u-1-3">
+				<a class="yui3-thumb-eliptical">
+					<img src="assets/images/space_guy.jpg"/>
+				</a>
+			</li>
+			<li class="yui3-u-1-3">
+				<a class="yui3-thumb-rounded">
+					<img src="assets/images/space_guy.jpg"/>
+				</a>
+			</li>
+			<li class="yui3-u-1-3">
+				<a class="yui3-thumb-bordered"><img src="assets/images/space_guy.jpg"/>	
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor. Suspendisse dictum fermentum dui at mollis. Nunc pulvinar blandit diam in vehicula.
+						</p>
+					</div>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="yui3-thumbnails">
+			<li>
+				<a class="yui3-thumb-eliptical" href="#">
+					<img src="assets/images/space_guy.jpg" width="80"/>
+				</a>
+			</li>
+			<li>
+				<a class="yui3-thumb-rounded" href="#">
+					<img src="assets/images/space_guy.jpg" width="80"/>
+				</a>
+			</li>
+			<li>
+				<a class="yui3-thumb-bordered" href="#"><img src="assets/images/space_guy.jpg" width="80"/></a>
+			</li>
+			<li>
+				<a class="yui3-thumb-bordered" href="#"><img src="assets/images/space_guy.jpg" width="80"/>	
+					<div class="caption">
+						<h3>Thumbnail</h3>
+						<p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor.
+						</p>
+					</div>
+				</a>
+			</li>
+			
+		</ul>
+
+
+		<h2>Code</h2>
+		...when using a <code>&lt;div&gt;</code> make sure to...<br>
+		then you will have what is needed for the DOM to layout.
+		<p>
+<pre>for (i = 0; i < 10; i+=1) {
+    myValue = i;
+}</pre>
+		<h2>Badges/Pills</h2>
+		<span class="badge">1</span>
+		<span class="badge badge-success">2</span>
+		<span class="badge badge-warning">4</span>
+		<span class="badge badge-important">6</span>
+		<span class="badge badge-info">8</span>
+		<span class="badge badge-inverse">10</span>
+
+		<h2>Notifications</h2>
+		<div class="alert-container">
+			<div class="alert alert-subtle">
+				<label>System Notification</label>
+				This system will be temporarily out of service.
+			</div>
+			<div class="alert alert-urgent">
+				<label>Breaking News</label>
+				Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
+			</div>
+			<div class="alert alert-normal">
+				<label>Green Bay Packers</label>
+				Looks like you like the Green Bay Packers so we added the team to your Sports App!
+			</div>
+		</div>
+		<div class="alert alert-subtle">
+			<label>System Notification</label>
+			This system will be temporarily out of service.
+		</div>
+		<div class="alert alert-urgent">
+			<label>Breaking News</label>
+			Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
+		</div>
+		<div class="alert alert-normal">
+			<label>Green Bay Packers</label>
+			Looks like you like the Green Bay Packers so we added the team to your Sports App!
+		</div>
+
+	</div>
+</body>
+</html>

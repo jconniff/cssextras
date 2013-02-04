@@ -1,0 +1,10 @@
+{
+    "name": "cssextras",
+    "builds": {
+        "cssextras": {
+            "cssfiles": [
+                "css/cssextras.css"
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name"       : "cssextras",
+    "displayName": "Gallery: cssextras",
+    "description": "*Summary Goes Here*",
+    "author"     : [ "jconniff" ],
+    "use"        : [ "cssextras" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}
