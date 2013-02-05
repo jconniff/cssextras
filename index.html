@@ -49,6 +49,7 @@ h1,h2,h3,h4,h5,h6 {
     margin: 1em; /* remove this. it's only for viewing during dev */
 }
 
+
 .yui3-button.block {
     display: block;
 }
@@ -73,37 +74,117 @@ h1,h2,h3,h4,h5,h6 {
     <div class="header y-u-1">
 
         <h1 class="yui3-u-1">YUI3 CSS Extras</h1>
-        <h2 class="yui3-u">Simple styling for images, thumbnails, code, badges/pills/ alerts</h2>
+        <h2 class="yui3-u">Simple styling for images, thumbnails, code, badges, contextual menus, alerts</h2>
 
     </div>
     <div class="content">
+        <h2>First, include it on your page</h2>
+
+        <p>Add the CSS on your page:</p>
+
+<code>
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://yui.yahooapis.com/gallery-2013.01.09-23-24/build/gallerycss-cssextras/gallerycss-cssextras.css&quot;&gt;
+</code>
+
+        <p>Optionally, you can load it through the <code>YUI().use()</code>:</p>
+
+<pre>
+  YUI({
+    //specify a gallery build
+    gallery: 'gallery-2013.01.09-23-24'
+  }).use(gallerycss-cssextras', function(Y) {
+    Y.log('YUI Loaded');
+  });
+</pre>
+
         <h2>Images</h2>
+        <p>
+            Styling of three different types are available for images, eliptical, rounded, bordered.
+            To use them, just add one of these classes to the <code>&lt;img&gt;</code> tag
+        </p>
+        <p>
+            <script src="https://gist.github.com/4710293.js"></script>
+        </p>
+
         <img class="yui3-img-eliptical" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
         <img class="yui3-img-rounded" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
         <img class="yui3-img-bordered" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
         <br>
-        <img class="yui3-img-eliptical" src="http://dribbble.s3.amazonaws.com/users/23832/screenshots/928731/wigu_closing.jpg" width="200" height="150"/>
-        <img class="yui3-img-rounded" src="http://dribbble.s3.amazonaws.com/users/23832/screenshots/928731/wigu_closing.jpg" width="200" height="150"/>
-        <img class="yui3-img-bordered" src="http://dribbble.s3.amazonaws.com/users/23832/screenshots/928731/wigu_closing.jpg" width="200" height="150"/>
-        
-        
+<!--        <img class="yui3-img-eliptical" src="assets/images/pic_dark.jpg"/>
+        <img class="yui3-img-rounded" src="assets/images/pic_dark.jpg"/>
+        <img class="yui3-img-bordered" src="assets/images/pic_dark.jpg"/>
+        <br>
+        <img class="yui3-img-eliptical" src="assets/images/pic_medium.jpg"/>
+        <img class="yui3-img-rounded" src="assets/images/pic_medium.jpg"/>
+        <img class="yui3-img-bordered" src="assets/images/pic_medium.jpg"/>
+        <br>
+        <img class="yui3-img-eliptical" src="assets/images/pic_light.jpg"/>
+        <img class="yui3-img-rounded" src="assets/images/pic_light.jpg"/>
+        <img class="yui3-img-bordered" src="assets/images/pic_light.jpg"/>
+ -->        
+        <p>
+            When using class <code>yui3-img-eliptical</code>, if the width and height of the image
+            are equal, it will appear as a circle.
+        </p>
+        <img class="yui3-img-eliptical" src="http://dribbble.s3.amazonaws.com/users/23832/screenshots/928731/wigu_closing.jpg" width="200" height="150" width="115" height="115"/>
+        <p>
+            <script src="https://gist.github.com/4710691.js"></script>
+        </p>
+
         <h2>Thumbnails</h2>
+        <p>
+            Add the class <code>yui3-thumbnails</code> to the container <code>&lt;ul&gt;</code>,
+            Then add one of the classes, <code>yui3-thumb-eliptical, yui3-thumb-rounded, or yui3-thumb-bordered</code>, to the <code>&lt;a&gt;</code>,
+            .
+        </p>
+        <ul class="yui3-thumbnails">
+            <li>
+                <a class="yui3-thumb-eliptical" href="#">
+                    <img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/>
+                </a>
+            </li>
+            <li>
+                <a class="yui3-thumb-rounded" href="#">
+                    <img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/>
+                </a>
+            </li>
+            <li>
+                <a class="yui3-thumb-bordered" href="#"><img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/></a>
+            </li>
+            <li>
+                <a class="yui3-thumb-bordered" href="#"><img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/> 
+                    <div class="caption">
+                        <h3>Rocket – game concept</h3>
+                        <p>This is a great shot from Jozef Mak from Dribbble.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <p>
+            Adding a <code>&lt;div class="caption"&gt;</code> allows you to customize the thumbnail with additional content.
+        </p>
+
+        <p>
+            <script src="https://gist.github.com/4710836.js"></script>
+        </p>
+
         <p>
             if you have yui grids on the page, add yui3-u-* for multi-column thumbnails that scale to fit the columns.
         </p>
-        <ul class="yui3-thumbnails yui3-g-r">
+        <ul class="yui3-thumbnails yui3-g">
             <li class="yui3-u-1-3">
                 <a class="yui3-thumb-eliptical">
-                    <img src="assets/images/space_guy.jpg"/>
+                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/>
                 </a>
             </li>
             <li class="yui3-u-1-3">
                 <a class="yui3-thumb-rounded">
-                    <img src="assets/images/space_guy.jpg"/>
+                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/>
                 </a>
             </li>
             <li class="yui3-u-1-3">
-                <a class="yui3-thumb-bordered"><img src="assets/images/space_guy.jpg"/> 
+                <a class="yui3-thumb-bordered"><img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/> 
                     <div class="caption">
                         <h3>Thumbnail label</h3>
                         <p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor. Suspendisse dictum fermentum dui at mollis. Nunc pulvinar blandit diam in vehicula.
@@ -111,77 +192,82 @@ h1,h2,h3,h4,h5,h6 {
                     </div>
                 </a>
             </li>
-            
         </ul>
-        <ul class="yui3-thumbnails">
-            <li>
-                <a class="yui3-thumb-eliptical" href="#">
-                    <img src="assets/images/space_guy.jpg" width="80"/>
-                </a>
-            </li>
-            <li>
-                <a class="yui3-thumb-rounded" href="#">
-                    <img src="assets/images/space_guy.jpg" width="80"/>
-                </a>
-            </li>
-            <li>
-                <a class="yui3-thumb-bordered" href="#"><img src="assets/images/space_guy.jpg" width="80"/></a>
-            </li>
-            <li>
-                <a class="yui3-thumb-bordered" href="#"><img src="assets/images/space_guy.jpg" width="80"/> 
-                    <div class="caption">
-                        <h3>Thumbnail</h3>
-                        <p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor.
-                        </p>
-                    </div>
-                </a>
-            </li>
-            
-        </ul>
+        <p>
+            <script src="https://gist.github.com/4710717.js"></script>
+        </p>
+
 
 
         <h2>Code</h2>
-        ...when using a <code>&lt;div&gt;</code> make sure to...<br>
-        then you will have what is needed for the DOM to layout.
         <p>
-<pre>for (i = 0; i < 10; i+=1) {
+            Designate text as being code as in this example...
+        </p> 
+            example: When using a <code>&lt;div&gt;</code> make sure to...<br>
+        
+        <p>     
+            <script src="https://gist.github.com/jconniff/4715460.js"></script>
+        </p>
+        <p>
+            To show a block of code, wrap it in a <code>&lt;pre&gt;</code>...<code>&lt;/pre&gt;</code> tag.
+        </p>            
+<pre>
+for (i = 0; i < 10; i+=1) {
     myValue = i;
-}</pre>
-        <h2>Badges/Pills</h2>
-        <span class="badge">1</span>
-        <span class="badge badge-success">2</span>
-        <span class="badge badge-warning">4</span>
-        <span class="badge badge-important">6</span>
-        <span class="badge badge-info">8</span>
-        <span class="badge badge-inverse">10</span>
+}
+</pre>
+        <p>
+            <script src="https://gist.github.com/jconniff/4715512.js"></script>
+        </p>
+        <!-- <code>&lt;&gt;</code> -->
 
+        <h2>Badges/Pills</h2>
+        <p>
+            To create a badge/pill, use a <code>&lt;span&gt;</code> tag, and add one of the badge classes as shown below
+        </p>
+        <span class="badge">1</span>
+        <span class="badge-success">2</span>
+        <span class="badge-warning">4</span>
+        <span class="badge-important">6</span>
+        <span class="badge-info">8</span>
+        <span class="badge-inverse">10</span>
+        <p>
+        <script src="https://gist.github.com/jconniff/4715697.js"></script>
+        </p>
         <h2>Notifications</h2>
+        <p>
+            Create notifications by adding a class to it's <code>&lt;div&gt;</code>,
+        </p>
         <div class="alert-container">
-            <div class="alert alert-subtle">
+            <div class="alert-subtle">
                 <label>System Notification</label>
                 This system will be temporarily out of service.
             </div>
-            <div class="alert alert-urgent">
+            <div class="alert-urgent">
                 <label>Breaking News</label>
                 Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
             </div>
-            <div class="alert alert-normal">
+            <div class="alert-normal">
                 <label>Green Bay Packers</label>
                 Looks like you like the Green Bay Packers so we added the team to your Sports App!
             </div>
         </div>
-        <div class="alert alert-subtle">
+        <div class="alert-subtle">
             <label>System Notification</label>
             This system will be temporarily out of service.
         </div>
-        <div class="alert alert-urgent">
+        <div class="alert-urgent">
             <label>Breaking News</label>
             Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
         </div>
-        <div class="alert alert-normal">
+        <div class="alert-normal">
             <label>Green Bay Packers</label>
             Looks like you like the Green Bay Packers so we added the team to your Sports App!
         </div>
+        <p>
+            <script src="https://gist.github.com/jconniff/4716486.js"></script>
+        </p>
+
 
 
         <h2>Contextual Modals</h2>
@@ -288,9 +374,6 @@ h1,h2,h3,h4,h5,h6 {
         <h2>Tooltips</h2>
 
         <p>Tooltip markup is identical to popover markup, but can be triggered off <code>title</code> attributes.</p>
-
-
-
     </div>
 </body>
 </html>
