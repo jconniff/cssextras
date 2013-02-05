@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="http://necolas.github.com/normalize.css/1.0.2/normalize.css">
 <link rel="stylesheet" type="text/css" href="cssextras.css">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.9.0pr1/build/cssgrids-responsive/cssgrids-responsive-min.css">
+<link rel="stylesheet" type="text/css" href="ybutton.css">
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssbutton/cssbutton-min.css">
 <style>
 body {
@@ -47,11 +48,6 @@ h1,h2,h3,h4,h5,h6 {
 .yui3-img-rounded,
 .yui3-img-bordered {
     margin: 1em; /* remove this. it's only for viewing during dev */
-}
-
-
-.yui3-button.block {
-    display: block;
 }
 
 .spacer {
@@ -170,21 +166,21 @@ h1,h2,h3,h4,h5,h6 {
         </p>
 
         <p>
-            if you have yui grids on the page, add yui3-u-* for multi-column thumbnails that scale to fit the columns.
+            if you have YUI grids on the page, add <code>yui3-u-*</code> for multi-column thumbnails that scale to fit the columns.
         </p>
         <ul class="yui3-thumbnails yui3-g">
             <li class="yui3-u-1-3">
                 <a class="yui3-thumb-eliptical">
-                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/>
+                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/>
                 </a>
             </li>
             <li class="yui3-u-1-3">
                 <a class="yui3-thumb-rounded">
-                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/>
+                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/>
                 </a>
             </li>
             <li class="yui3-u-1-3">
-                <a class="yui3-thumb-bordered"><img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="100"/> 
+                <a class="yui3-thumb-bordered"><img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/> 
                     <div class="caption">
                         <h3>Thumbnail label</h3>
                         <p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor. Suspendisse dictum fermentum dui at mollis. Nunc pulvinar blandit diam in vehicula.
@@ -336,7 +332,7 @@ for (i = 0; i < 10; i+=1) {
                     <div class="yui3-g">
                         <div class="yui3-u-1-5 bolded">Yahoo! Mail</div>
                         <div class="yui3-u-3-5">You have 3 new messages.</div>
-                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="yui3-button">Read</a></div>
+                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="small yui3-button">Read</a></div>
                     </div>
                     <div class="yui3-arrow-border"></div>
                     <div class="yui3-arrow"></div>
@@ -352,23 +348,39 @@ for (i = 0; i < 10; i+=1) {
                     <div class="yui3-g spacer">
                         <div class="yui3-u-1-5 bolded">Finance:</div>
                         <div class="yui3-u-3-5"><strong>AAPL</strong> dropped <strong>5%</strong> to $612.26 in After Hours trading.</div>
-                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="yui3-button">Full Chart</a></div>
+                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="small yui3-button">Full Chart</a></div>
                     </div>
                     <div class="yui3-g spacer">
                         <div class="yui3-u-1-5 bolded">Messenger:</div>
                         <div class="yui3-u-3-5">3 unread messages from Chad Michaels.</div>
-                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="yui3-button">Read</a></div>
+                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="small yui3-button">Read</a></div>
                     </div>
                     <div class="yui3-g spacer">
                         <div class="yui3-u-1-5 bolded">Sports:</div>
                         <div class="yui3-u-3-5"><strong>Final Score</strong> Oakland <strong>3-1</strong> Baltimore</div>
-                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="yui3-button">Highlights</a></div>
+                        <div class="yui3-u-1-5 rightAligned"><a href="#" class="small yui3-button">Highlights</a></div>
                     </div>
                     <div class="yui3-arrow-border"></div>
                     <div class="yui3-arrow"></div>
                 </div>
             </div>
         </div>
+
+        <h2>Buttons</h2>
+
+        <p>Buttons are provided through <code>cssbutton</code>. Attach the <code>.primary</code> or <code>.error</code> class names to toggle styles.</p>
+
+        <a href="#" class="yui3-button">Highlights</a>
+        <a href="#" class="yui3-button primary">Primary Button</a>
+        <a href="#" class="yui3-button error">Be Careful!</a>
+
+        <h3>Large Button</h3>
+        <p>Large buttons have twice the padding of regular buttons. Apply the <code>.large</code> class name.</p>
+        <a href="#" class="yui3-button large">Big click target</a>
+
+        <h3>Small Buttons</h3>
+        <p>Small buttons have half the padding of regular buttons. Apply the <code>.small</code> class name.</p>
+        <a href="#" class="yui3-button small">Smaller target.</a>
 
 
         <h2>Tooltips</h2>
