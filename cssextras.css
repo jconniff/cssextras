@@ -127,33 +127,38 @@ pre {
 }
 
 /* Badges/Pills */
-.badge {
+.badge,
+.badge-important,
+.badge-warning,
+.badge-success,
+.badge-info,
+.badge-inverse {
     border-radius: 3em; 
-    padding: 0.6em 0.9em;
-    background-color: #999999;
+    padding: 0.55em 0.9em 0.65em;
+    background-color: #9D988E;
     color: #FFFFFF;
     display: inline-block;
     font-size: 11.844px;
     font-weight: bold;
-    line-height: 14px;
+    line-height: 1.2em;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     vertical-align: baseline;
     white-space: nowrap;
 }
 .badge-important {
-    background-color: #B94A48;
+    background-color: #C95C35;
 }
 .badge-warning {
-    background-color: #F89406;
+    background-color: #E78C05;
 }
 .badge-success {
-    background-color: #468847;
+    background-color: #5F9860;
 }
 .badge-info {
-    background-color: #3A87AD;
+    background-color: #437AC6;
 }
 .badge-inverse {
-    background-color: #333333;
+    background-color: #4D370C;
 }
 
 /* Alerts */
@@ -162,9 +167,11 @@ pre {
     padding: 2em 0 1em;
     margin-bottom: 1em;
 }
-.alert {
+.alert,
+.alert-subtle,
+.alert-urgent,
+.alert-normal {
     position: relative;
-    background-color: #FCF8E3;
     margin-bottom: 20px;
     padding: 1em 100px;
     font-size: 75%;
@@ -180,13 +187,10 @@ pre {
     background: linear-gradient(to bottom,  rgba(0,0,0,0.10) 0%,rgba(255,255,255,0) 50%); /* W3C */
     box-shadow: 0 3px 3px rgba(0,0,0,0.28);
 }
-.alert, .alert h4 {
-    color: #C09853;
-}
-.alert h4 {
-    margin: 0;
-}
-.alert label {
+.alert label,
+.alert-subtle label,
+.alert-urgent label,
+.alert-normal label {
     display: inline-block;
     width: 150px;
     display: inline-block;
@@ -195,27 +199,18 @@ pre {
     *zoom: 1;
     white-space: nowrap;
 }
-/*button.close {
-    background: none repeat scroll 0 0 transparent;
-    border: 0 none;
-    cursor: pointer;
-    padding: 0;
-}*/
-
+.alert,
 .alert-subtle {
     background-color: #CECFD3;
-/*    border-color: #D6E9C6;
-*/    color: #5B5B5B;
+    color: #5B5B5B;
 }
 .alert-urgent {
     background-color: #D13C38;
-/*    border-color: #EED3D7;
-*/    color: #fff;
+    color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 
 }
 .alert-normal {
     background-color: #6ACFE9;
-/*    border-color: #BCE8F1;
-*/    color: #2e2e2e;
+    color: #2e2e2e;
 }
