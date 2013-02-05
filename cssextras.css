@@ -6,10 +6,10 @@ html body {
 /* Images */
 .yui3-img-eliptical,
 .yui3-img-rounded {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);       
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);       
 }
 .yui3-img-eliptical {
-	border-radius: 50%;
+	border-radius: 80%;
 }
 .yui3-img-rounded {
 	border-radius: 3px;
@@ -18,7 +18,7 @@ html body {
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);   
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);   
     border-radius: 3px;
 }
 
@@ -219,3 +219,96 @@ pre {
 /*    border-color: #BCE8F1;
 */    color: #2e2e2e;
 }
+
+
+/* Contextual Modals */
+
+.yui3-popover {
+    position: relative;
+    width: 300px;
+    background-color: #f0f1f3;
+    color: #2f3034;
+    text-shadow: 1px 1px 1px #ebecef;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border: 1px solid #bfc0c8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-padding: border-box;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.yui3-arrow-border, .yui3-arrow {
+    border-style: solid;
+    border-width: 10px;
+    height:0;
+    width:0;
+    position:absolute;
+}
+
+
+/* POPOVER ARROW POSITIONING BOTTOM */
+
+.yui3-popover.bottom .yui3-arrow-border {
+    border-color: #bfc0c8 transparent transparent transparent;
+    bottom: -20px;
+    left: 50%;
+}
+.yui3-popover.bottom .yui3-arrow {
+    border-color: #f0f1f3 transparent transparent transparent; 
+    bottom:-19px;
+    left: 50%;
+}
+
+/* POPOVER ARROW POSITIONING TOP*/
+
+.yui3-popover.top .yui3-arrow-border {
+    border-color: transparent transparent #bfc0c8 transparent;
+    top: -21px;
+    left: 50%;
+}
+.yui3-popover.top .yui3-arrow {
+    border-color: transparent transparent #f0f1f3 transparent; 
+    top:-20px;
+    left: 50%;
+}
+
+/* POPOVER ARROW POSITIONING RIGHT*/
+
+.yui3-popover.right .yui3-arrow-border {
+    border-color: transparent transparent transparent #bfc0c8;
+    top: 45%;
+    right: -21px;
+}
+.yui3-popover.right .yui3-arrow {
+    border-color: transparent transparent transparent #f0f1f3; 
+    top:45%;
+    right: -20px;
+}
+
+
+/* POPOVER ARROW POSITIONING LEFT*/
+
+.yui3-popover.left .yui3-arrow-border {
+    border-color: transparent #bfc0c8 transparent transparent;
+    top: 45%;
+    left: -21px;
+}
+.yui3-popover.left .yui3-arrow {
+    border-color: transparent #f0f1f3 transparent transparent; 
+    top:45%;
+    left: -20px;
+}
+
+
+
+
+
+
+
