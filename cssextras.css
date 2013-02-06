@@ -91,6 +91,8 @@ html body {
 .yui3-thumbnails .caption h3{
     font-weight: 500;
     font-size: 90%;
+    margin: 0;
+    line-height: 1.2em;
 }
 .yui3-thumb-bordered:hover {    
     box-shadow: 0 0 5px rgba(17, 175, 237, 0.5);   

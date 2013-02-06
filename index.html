@@ -62,6 +62,29 @@ h1,h2,h3,h4,h5,h6 {
 .bolded {
     font-weight: bold;
 }
+.example-caption{
+	position: relative;
+}
+.example-thumb-caption {
+	font-size: 70%;
+}
+.example-caption.eliptical:after,
+.example-caption.rounded:after,
+.example-caption.bordered:after {
+	position: absolute;
+	left: 1.5em;
+	bottom: 0;
+	font-size: 70%;
+}
+.example-caption.eliptical:after {
+	content: "yui3-img-eliptical";
+}
+.example-caption.rounded:after {
+	content: "yui3-img-rounded";
+}
+.example-caption.bordered:after {
+	content: "yui3-img-bordered";
+}
 </style>
 </head>
 
@@ -102,27 +125,26 @@ h1,h2,h3,h4,h5,h6 {
             <script src="https://gist.github.com/4710293.js"></script>
         </p>
 
-        <img class="yui3-img-eliptical" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
-        <img class="yui3-img-rounded" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
-        <img class="yui3-img-bordered" src="http://dribbble.s3.amazonaws.com/users/9418/screenshots/928345/suhio_shoot.png" width="200" height="150"/>
+        <span class="example-caption eliptical">
+	        <img class="yui3-img-eliptical" src="tests/manual/assets/images/stream.jpg" width="250" height="167"/>
+    	</span>
+
+        <span class="example-caption rounded">
+			<img class="yui3-img-rounded" src="tests/manual/assets/images/stream.jpg" width="250" height="167"/>
+		</span>
+
+        <span class="example-caption bordered">
+	        <img class="yui3-img-bordered" src="tests/manual/assets/images/stream.jpg" width="250" height="167"/>
+	    </span
+
         <br>
-<!--        <img class="yui3-img-eliptical" src="assets/images/pic_dark.jpg"/>
-        <img class="yui3-img-rounded" src="assets/images/pic_dark.jpg"/>
-        <img class="yui3-img-bordered" src="assets/images/pic_dark.jpg"/>
-        <br>
-        <img class="yui3-img-eliptical" src="assets/images/pic_medium.jpg"/>
-        <img class="yui3-img-rounded" src="assets/images/pic_medium.jpg"/>
-        <img class="yui3-img-bordered" src="assets/images/pic_medium.jpg"/>
-        <br>
-        <img class="yui3-img-eliptical" src="assets/images/pic_light.jpg"/>
-        <img class="yui3-img-rounded" src="assets/images/pic_light.jpg"/>
-        <img class="yui3-img-bordered" src="assets/images/pic_light.jpg"/>
- -->        
         <p>
             When using class <code>yui3-img-eliptical</code>, if the width and height of the image
             are equal, it will appear as a circle.
         </p>
-        <img class="yui3-img-eliptical" src="http://dribbble.s3.amazonaws.com/users/23832/screenshots/928731/wigu_closing.jpg" width="200" height="150" width="115" height="115"/>
+        <span class="example-caption eliptical">
+	        <img class="yui3-img-eliptical" src="tests/manual/assets/images/flower.jpg" width="150" height="150"/>
+    	</span>
         <p>
             <script src="https://gist.github.com/4710691.js"></script>
         </p>
@@ -135,26 +157,31 @@ h1,h2,h3,h4,h5,h6 {
         </p>
         <ul class="yui3-thumbnails">
             <li>
-                <a class="yui3-thumb-eliptical" href="#">
-                    <img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/>
+                <a class="yui3-thumb-eliptical" href="http://www.flickr.com/photos/katsrcool/7273047594/in/set-72157629835747790">
+                    <img src="tests/manual/assets/images/red_rock_thumb.jpg" width="88"/>
                 </a>
+                <span class="example-thumb-caption">yui3-thumb-eliptical</span>
             </li>
             <li>
-                <a class="yui3-thumb-rounded" href="#">
-                    <img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/>
+                <a class="yui3-thumb-rounded" href="http://www.flickr.com/photos/katsrcool/7273047594/in/set-72157629835747790">
+                    <img src="tests/manual/assets/images/red_rock_thumb.jpg" width="80"/>
                 </a>
+                <span class="example-thumb-caption">yui3-thumb-rounded</span>
             </li>
             <li>
-                <a class="yui3-thumb-bordered" href="#"><img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/></a>
+                <a class="yui3-thumb-bordered" href="http://www.flickr.com/photos/katsrcool/7273047594/in/set-72157629835747790"><img src="tests/manual/assets/images/red_rock_thumb.jpg" width="80"/></a>
+                <span class="example-thumb-caption">yui3-thumb-bordered</span>
             </li>
             <li>
-                <a class="yui3-thumb-bordered" href="#"><img src="http://dribbble.s3.amazonaws.com/users/30431/screenshots/271351/rocket-dribbble.png" width="80"/> 
+                <a class="yui3-thumb-bordered" href="http://www.flickr.com/photos/katsrcool/7273047594/in/set-72157629835747790"><img src="tests/manual/assets/images/red_rock_thumb.jpg" width="80"/> 
                     <div class="caption">
-                        <h3>Rocket – game concept</h3>
-                        <p>This is a great shot from Jozef Mak from Dribbble.
+                        <h3>Landscape</h3>
+                        <p>Beautiful desert images in Utah.
+                        	By Bob Protus
                         </p>
                     </div>
                 </a>
+                <span class="example-thumb-caption">yui3-thumb-bordered</span>
             </li>
         </ul>
         <p>
@@ -164,36 +191,6 @@ h1,h2,h3,h4,h5,h6 {
         <p>
             <script src="https://gist.github.com/4710836.js"></script>
         </p>
-
-        <p>
-            if you have YUI grids on the page, add <code>yui3-u-*</code> for multi-column thumbnails that scale to fit the columns.
-        </p>
-        <ul class="yui3-thumbnails yui3-g">
-            <li class="yui3-u-1-3">
-                <a class="yui3-thumb-eliptical">
-                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/>
-                </a>
-            </li>
-            <li class="yui3-u-1-3">
-                <a class="yui3-thumb-rounded">
-                    <img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/>
-                </a>
-            </li>
-            <li class="yui3-u-1-3">
-                <a class="yui3-thumb-bordered"><img src="http://dribbble.s3.amazonaws.com/users/4467/screenshots/661196/sasquatch-troop-full.jpg" width="180"/> 
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Curabitur et sapien ac diam pharetra lacinia quis ac tortor. Suspendisse dictum fermentum dui at mollis. Nunc pulvinar blandit diam in vehicula.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        </ul>
-        <p>
-            <script src="https://gist.github.com/4710717.js"></script>
-        </p>
-
-
 
         <h2>Code</h2>
         <p>
