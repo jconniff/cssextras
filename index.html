@@ -12,6 +12,7 @@
 body {
     font-family: sans-serif;
     color: #333;
+    line-height: 1.7em;
 }
 
 .header {
@@ -85,6 +86,18 @@ h1,h2,h3,h4,h5,h6 {
 .example-caption.bordered:after {
 	content: "yui3-img-bordered";
 }
+
+.gist {
+    margin-top:25px;
+}
+.gist::before {
+    content: "Code:";
+    margin-bottom: 10px;
+    display: block; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+                 "Helvetica Neue", sans-serif;
+    font-weight: 300;
+}
 </style>
 </head>
 
@@ -152,7 +165,7 @@ h1,h2,h3,h4,h5,h6 {
         <h2>Thumbnails</h2>
         <p>
             Add the class <code>yui3-thumbnails</code> to the container <code>&lt;ul&gt;</code>,
-            Then add one of the classes, <code>yui3-thumb-eliptical, yui3-thumb-rounded, or yui3-thumb-bordered</code>, to the <code>&lt;a&gt;</code>,
+            Then add one of the classes, <code>yui3-thumb-eliptical, yui3-thumb-rounded, or yui3-thumb-bordered</code>, to the <code>&lt;a&gt;</code>
             .
         </p>
         <ul class="yui3-thumbnails">
@@ -196,7 +209,7 @@ h1,h2,h3,h4,h5,h6 {
         <p>
             Designate text as being code as in this example...
         </p> 
-            example: When using a <code>&lt;div&gt;</code> make sure to...<br>
+            <strong>For example:</strong> When using a <code>&lt;div&gt;</code> make sure to...<br>
         
         <p>     
             <script src="https://gist.github.com/jconniff/4715460.js"></script>
@@ -216,44 +229,44 @@ for (i = 0; i < 10; i+=1) {
 
         <h2>Badges</h2>
         <p>
-            To create a badge, use a <code>&lt;span&gt;</code> tag, and add one of the badge classes as shown below
+            To create a badge, use a <code>&lt;span&gt;</code> tag, and add one of the badge classes as shown below. Badges are great for categorizing and color-coding items. 
         </p>
-        <span class="badge">1</span>
-        <span class="badge-success">success</span>
-        <span class="badge-warning">warning</span>
-        <span class="badge-important">A</span>
-        <span class="badge-info">3.8</span>
-        <span class="badge-inverse">inverse</span>
+        <span class="yui3-badge">1</span>
+        <span class="yui3-badge-success">success</span>
+        <span class="yui3-badge-warning">warning</span>
+        <span class="yui3-badge-important">A</span>
+        <span class="yui3-badge-info">3.8</span>
+        <span class="yui3-badge-inverse">inverse</span>
         <p>
         <script src="https://gist.github.com/jconniff/4715697.js"></script>
         </p>
         <h2>Notifications</h2>
         <p>
-            Create notifications by adding a class to it's <code>&lt;div&gt;</code>,
+            Create notifications by adding a class to it's <code>&lt;div&gt;</code>. Subtle grey notifications can be implemented by using the <code>yui3-alert-subtle</code> class name. Create a more noticible alert by using the <code>yui3-alert-urgent</code>. Regular notifications can be created by using the <code>yui3-alert-normal</code>. 
         </p>
-        <div class="alert-container">
-            <div class="alert-subtle">
+        <div class="yui3-alert-container">
+            <div class="yui3-alert-subtle">
                 <label>System Notification</label>
                 This system will be temporarily out of service.
             </div>
-            <div class="alert-urgent">
+            <div class="yui3-alert-urgent">
                 <label>Breaking News</label>
                 Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
             </div>
-            <div class="alert-normal">
+            <div class="yui3-alert-normal">
                 <label>Green Bay Packers</label>
                 Looks like you like the Green Bay Packers so we added the team to your Sports App!
             </div>
         </div>
-        <div class="alert-subtle">
+        <div class="yui3-alert-subtle">
             <label>System Notification</label>
             This system will be temporarily out of service.
         </div>
-        <div class="alert-urgent">
+        <div class="yui3-alert-urgent">
             <label>Breaking News</label>
             Official: 'Most' of Atlanic City Underwater. Atlantic City Boardwalk Destroyed by Sandy...
         </div>
-        <div class="alert-normal">
+        <div class="yui3-alert-normal">
             <label>Green Bay Packers</label>
             Looks like you like the Green Bay Packers so we added the team to your Sports App!
         </div>
@@ -264,6 +277,10 @@ for (i = 0; i < 10; i+=1) {
 
 
         <h2>Contextual Modals</h2>
+
+        <p>
+            Contextual Modals are great for displaying small amounts of additional content on demand. They can be triggered upon some user interaction. These modal boxes can contain any type of content that you want.
+        </p>
 
         <div class="yui3-g spacer">
             <div class="yui3-u-1-2">
@@ -319,8 +336,14 @@ for (i = 0; i < 10; i+=1) {
             </div>
         </div>
 
+        <p>
+            To implement these modals, use the markup below. You can change the classname from <code>top</code> to <code>left</code>, <code>right</code>, or <code>bottom</code> based on what direction you want the arrow to point.
+        </p>
+
+        <script src="https://gist.github.com/tilomitra/4725701.js"></script>
+
         <h2>Contextual Modals with Grids</h2>
-        <h3>You can use grids within these contextual menus for interesting effects.</h3>
+        <p>You can use grids within these contextual menus for interesting effects.</p>
 
         <div class="yui3-g spacer">
             <div class="yui3-u-1">
@@ -336,6 +359,9 @@ for (i = 0; i < 10; i+=1) {
                 </div>
             </div>
         </div>
+
+
+        <script src="https://gist.github.com/tilomitra/4725721.js"></script>
 
 
         <div class="yui3-g spacer">
@@ -363,26 +389,37 @@ for (i = 0; i < 10; i+=1) {
             </div>
         </div>
 
+        <script src="https://gist.github.com/tilomitra/4725745.js"></script>
+
+
         <h2>Buttons</h2>
 
-        <p>Buttons are provided through <code>cssbutton</code>. Attach the <code>.primary</code> or <code>.error</code> class names to toggle styles.</p>
+        <p>Buttons are provided through the <code>cssbutton</code> button. You can use it from the CDN:</p>
+
+        <code>
+            &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://yui.yahooapis.com/3.8.0/build/cssbutton/cssbutton-min.css&quot;&gt;
+        </code>
+
+        <p>Attach the <code>.primary</code> or <code>.error</code> class names to toggle styles.</p>
 
         <a href="#" class="yui3-button">Highlights</a>
         <a href="#" class="yui3-button primary">Primary Button</a>
         <a href="#" class="yui3-button error">Be Careful!</a>
 
+        <script src="https://gist.github.com/tilomitra/4725765.js"></script>
+
         <h3>Large Button</h3>
         <p>Large buttons have twice the padding of regular buttons. Apply the <code>.large</code> class name.</p>
         <a href="#" class="yui3-button large">Big click target</a>
+
+        <script src="https://gist.github.com/tilomitra/4725767.js"></script>
 
         <h3>Small Buttons</h3>
         <p>Small buttons have half the padding of regular buttons. Apply the <code>.small</code> class name.</p>
         <a href="#" class="yui3-button small">Smaller target.</a>
 
+        <script src="https://gist.github.com/tilomitra/4725772.js"></script>
 
-        <h2>Tooltips</h2>
-
-        <p>Tooltip markup is identical to popover markup, but can be triggered off <code>title</code> attributes.</p>
     </div>
 </body>
 </html>
