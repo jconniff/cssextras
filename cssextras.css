@@ -164,11 +164,6 @@ pre {
 }
 
 /* Alerts */
-.alert-container {
-    background-color: #73788E;
-    padding: 2em 0 1em;
-    margin-bottom: 1em;
-}
 .alert,
 .alert-subtle,
 .alert-urgent,
